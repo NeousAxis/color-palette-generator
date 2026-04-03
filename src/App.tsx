@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Copy, RefreshCw, Check, Palette, SlidersHorizontal, Download } from 'lucide-react';
+import { Copy, RefreshCw, Check, Palette, SlidersHorizontal, Download, Github } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { generatePalette, Color, PaletteType, getContrastColor } from './lib/colorUtils';
 
@@ -169,7 +169,16 @@ export default function App() {
         <p className="text-sm text-gray-500">
           Press <kbd className="px-2 py-1 bg-gray-100 border border-gray-300 rounded-md text-xs font-mono text-gray-700 mx-1">Space</kbd> to generate a new palette
         </p>
-        <div className="flex gap-3">
+        <div className="flex items-center gap-3">
+          <a
+            href="https://github.com/NeousAxis/color-palette-generator"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+          >
+            <Github size={16} />
+            GitHub
+          </a>
           <button 
             onClick={copyEntirePalette}
             className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
